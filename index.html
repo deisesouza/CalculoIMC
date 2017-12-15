@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculo de IMC</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Calculo de Índice de Massa Corporal com Javascript">
+	<meta name="author" content="Deise Souza">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- ESTILOS -->
+	<link rel="stylesheet" href="css/estilo-imc.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600" rel="stylesheet">
+   <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/formulario.js"></script>
+</head>
+<body>
+
+ <div class="row">
+	<div class="container-fluid ">
+		<!-- Formulário -->
+		<div class="col-sm-6 back-form">
+
+			<div class="container">
+				<form class="form-horizontal" id="formulario">
+				 
+					  <h3 class="titulo"><i class="fa fa-balance-scale" aria-hidden="true"></i> Cálculo do IMC </h3>
+					  
+					  <div class="form-group">
+						<label for ="kilos" class="control-label label-fontes"> Kilos: </label>  	 
+						<input type = "text" name ="kilos" class="form-control"> </input> 
+					  </div>
+
+					<div class="form-group">
+						<label for ="metros" class="control-label label-fontes"> Metros: </label>
+						<input type = "text" name ="metros" class="form-control"> </input>
+					</div>
+
+					<div class="form-group">
+						<label for ="centimetros" class="control-label label-fontes"> Centímetros: </label>
+						<input type = "text" name ="centimetros" class="form-control"> </input>
+					</div>
+
+					<div class="form-group">
+						<label for ="imc" class="control-label label-fontes"> IMC: </label>
+						<input type = "text" name="imc" disabled = "disabled" class="form-control"> </input>
+					</div>
+
+					<div class="form-group">
+						<label for ="imc" class="control-label label-fontes"> Resultado: </label>
+						<input type = "text" name ="resultado" disabled = "disabled" class="form-control"> </input>
+					  </div>
+
+				 	<div class="form-group">        
+				      <div class="col-sm-offset-2">
+				      	 <a href="#" class="btn btn-lg btn-success btn-direita" onclick="calcularIMC();">Calcular</a>
+				     
+				      </div>
+				    </div>
+				</form>
+			</div> <!-- fim do container -->
+		</div><!-- col-sm-6 -->
+
+<div class="col">
+	<div class="col-sm-6 back-result">
+		<div class="container">
+			<div class="tabela">
+				<h3>Classificação/Legenda</h3><br>
+				<!-- Tabela -->
+				<table class="table tb-fontes">
+				 <tr> 
+				  <td> Menor que 20 </td>
+				  <td> Abaixo do Peso </td>
+				 </tr>
+				 <tr>
+				  <td> 20 a 25 </td>
+				  <td> Peso Ideal </td>
+				 </tr> 
+				 <tr>
+				  <td> 25 a 30 </td>
+				  <td> Sobrepeso </td>
+				 </tr>
+				 <tr>
+				  <td> 30 a 35 </td>
+				  <td> Obesidade Moderada </td>
+				 </tr>
+				 <tr>
+				  <td> 35 a 40 </td>
+				  <td> Obesidade Severa </td>
+				 </tr> 
+				 <tr>
+				  <td> 40 a 50 </td>
+				  <td> Obesidade Mórbida </td>
+				 </tr>
+				 <tr>
+				  <td> Maior que 50 </td>
+				  <td> Super Obesidade </td>
+				 </tr> 
+				</table>
+			</div>
+		</div><!--container -->	
+	</div><!-- col-sm-6 -->
+</div><!--col -->	
+
+</div><!--content fluid -->	
+</body>
+</html>
